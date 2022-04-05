@@ -1,0 +1,24 @@
+dataset: 'cifar10'
+noise_mode: 'asymmetric'
+noise_rate: 0.1
+sln_mode: 'both'  # Can be [both, noisy, clean]
+path: 'noisy_label_generation/labels'
+
+batch_size: 32
+accumulation_steps: 4
+epochs: 300
+sigma: 0.0   # SLN
+learning_rate: 0.001
+momentum: 0.9
+weight_decay: 0.0005
+
+cifar10:
+  mean: [0.4914, 0.4822, 0.4465]
+  std: [0.2023, 0.1994, 0.2010]
+
+cifar100:
+  mean: [0.5071, 0.4867, 0.4408]
+  std: [0.2675, 0.2565, 0.2761]
+
+save_every_kth_epoch: 5
+checkpoint_path: "checkpoints"
